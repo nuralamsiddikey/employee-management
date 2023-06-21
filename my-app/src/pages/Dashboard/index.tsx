@@ -2,8 +2,10 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Employee from '../Employee';
 import Profile from '../Profile';
+import PersonalDetails from '../PersonalDetails';
 import Home from '../Home';
 import Header from '../../components/Header';
+import CompanyDetail from '../companyDetails';
 import logo from '../../assets/logo.jpeg'
 import Collapse from 'react-bootstrap/Collapse';
 import GridViewIcon from '@mui/icons-material/GridView';
@@ -21,7 +23,7 @@ export default function Dashboard() {
             <Router>
                 <Container fluid style={{ backgroundColor: '#F5F7F8', height: '100vh' }}>
                     <Row>
-                        <Col sm={2} style={{ backgroundColor: 'white', height: '100vh',padding:'30px'}}>
+                        <Col sm={2} style={{ backgroundColor: 'white', height: '100vh', padding: '30px' }}>
                             <div className="d-flex justify-content-center py-2" >
                                 <img src={logo} style={{ height: '100px', width: '100px' }} />
                             </div>
@@ -61,8 +63,8 @@ export default function Dashboard() {
                                 <Nav.Item>
                                     <Nav.Link as={Link} to="/profile" className='d-flex justify-content-between ' style={{ color: '#788084' }}>
                                         <div className='d-flex justify-content-between '>
-                                        <GridViewIcon />
-                                        <p className='ms-2'> Profile</p>
+                                            <GridViewIcon />
+                                            <p className='ms-2'> Profile</p>
                                         </div>
                                         <ChevronRightIcon />
                                     </Nav.Link>
@@ -75,6 +77,8 @@ export default function Dashboard() {
                                 <Route path="/" element={<Home />} />
                                 <Route path="/profile" element={<Profile />} />
                                 <Route path="/employee" element={<Employee />} />
+                                <Route path="/p" element={<PersonalDetails />} />
+                                <Route path="/c" element={<CompanyDetail />} />
                             </Routes>
                         </Col>
                     </Row>
