@@ -18,7 +18,10 @@ exports.Create = async (req: Request, res: Response) => {
         })
 
         if(existEmployee.length>0){
-          return  res.status(200).json({message:"This email already exist"})
+          return  res.status(301).json({
+            message:"This email already exist",
+            error: true
+        })
         }
 
 
@@ -32,6 +35,7 @@ exports.Create = async (req: Request, res: Response) => {
 
         res.status(201).json({
             message: "Successfully created new employee",
+            data:createdRecord,
             error: false
         })
 

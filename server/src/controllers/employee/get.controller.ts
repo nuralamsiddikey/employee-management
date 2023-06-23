@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
 import { Employee } from '../../Entities/Employee';
-import { createConnection, getConnection, getRepository } from 'typeorm';
+import { ILike, createConnection, getConnection, getRepository } from 'typeorm';
 
 
 exports.GetAllEmployees = async (req: Request, res: Response) => {
@@ -44,6 +44,46 @@ exports.GetEmployeeById = async (req: Request, res: Response) => {
     });
 
 
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
+
+
+exports.Export = async(req:Request,res:Response)=> {
+  try{
+      res.download('./src/demo.txt')
+   
+  }catch(error){
+    console.log(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+}
+
+
+exports.searchEmployees = async (req:Request, res:Response) => {
+  try {
+    const employeeRepository = getRepository(Employee);
+    const page = parseInt(req.query.page as string) || 1;
+    const limit = parseInt(req.query.limit as string) || 10;
+    const searchQuery = req.query.q || ''; 
+
+    const [employees, total] = await employeeRepository.findAndCount({
+      where: [
+        { name: ILike(`%${searchQuery}%`) }, 
+        { email: ILike(`%${searchQuery}%`) }, 
+      ],
+      skip: (page - 1) * limit,
+      take: limit,
+    });
+
+    res.json({
+      page,
+      limit,
+      total,
+      data: employees,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: 'Internal Server Error' });

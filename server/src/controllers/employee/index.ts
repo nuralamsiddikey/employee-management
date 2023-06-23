@@ -6,6 +6,8 @@ const {UpdateEmployeeById} = require('./put.controller')
 const {
     GetAllEmployees,
     GetEmployeeById,
+    Export,
+    searchEmployees
 } = require('./get.controller')
 
 module.exports = {
@@ -13,5 +15,7 @@ module.exports = {
     GetAllEmployees,
     GetEmployeeById,
     DeleteEmployeeById,
-    UpdateEmployeeById
+    UpdateEmployeeById,
+    Export,
+    searchEmployees
 }

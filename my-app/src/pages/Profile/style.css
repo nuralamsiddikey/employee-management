@@ -1,34 +1,28 @@
-.custom-row {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 16px; 
-  }
-  .custom-col-1, .custom-col-2{
-      border-radius: 10px;
-  }
-  /* .section1 {
-    position: relative;
-  }
-  .section1::after  {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    background-color: lightblue;
-    top: 0;
-    left: 0;
-  } */
-  
-  .data{
-      display: flex;
-      justify-content: space-between;
-      line-height: 2ch;
-  }
-  .d-2{
-      font-weight: bold;
-  }
 
-  .profile-img {
-    outline: 4px solid red !important;
 
-  }
+ .custom-col-1,
+ .custom-col-2 {
+   border-radius: 10px;
+ }
+
+
+ .d-2 {
+   font-weight: 700;
+   color: #355967;
+ }
+
+ .profile-img {}
+
+ li a {
+   text-decoration: none;
+   padding: 10px 0;
+   display: inline-block;
+   color: #093446;
+ }
+
+ .top-nav {
+   border-bottom: 1px solid lightgray;
+ }
+ Form{
+  color: #093446;
+ }

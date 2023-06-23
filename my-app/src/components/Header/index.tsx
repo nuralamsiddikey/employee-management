@@ -26,7 +26,7 @@ export default function Header() {
 
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link text-bold" href="#">HR Management</a>
+              <h4 style={{ color: '#093446' }}>HR Management</h4>
             </li>
           </ul>
         </div>

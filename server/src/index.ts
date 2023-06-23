@@ -2,14 +2,16 @@ import { Request, Response } from 'express';
 var express = require('express');
 var reflectMetadata = require('reflect-metadata');
 var {Employee} = require('./Entities/Employee');
+const cors = require('cors')
 
 
 const app = express()
-const PORT = 8000
+const PORT = 8080
 
 
 const router = require('./routes')
 app.use(express.json())
+app.use(cors())
 app.use("/api", router)
 
 
