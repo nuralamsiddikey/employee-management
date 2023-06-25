@@ -17,17 +17,20 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 import "./style.css"
 
+
+
 export default function Dashboard() {
     const [open, setOpen] = React.useState(false);
+    
     return (
         <div>
             <Router>
                 <div  style={{backgroundColor:'#F5F7F8'}}>
-                    <div className="row w-100 ">
+                    <div className="row ">
                         {/* <Col md={2} style={{ backgroundColor: 'white', height: 'auto', padding: '30px' }}>
                            
                         </Col> */}
-                        <div className="col-12 d-none d-md-block col-md-3 col-lg-2 bg-white">
+                        <div className="d-none d-md-block col-md-3 col-lg-2 bg-white">
                         <div className="d-flex justify-content-center py-2" >
                                 <img src={logo} style={{ height: '100px', width: '100px' }} />
                             </div>
@@ -78,7 +81,7 @@ export default function Dashboard() {
                         {/* <Col md={10} className='p-0' style={{ minHeight: '100vh' }}>
                            
                         </Col> */}
-                        <div className="col-12  col-md-9  min-vh-100 p-0">
+                        <div className="col-12 col-md-9 col-lg-10 min-vh-100 p-0">
                         <Header />
                             <Routes>
                                 <Route path="/" element={<Home />} />

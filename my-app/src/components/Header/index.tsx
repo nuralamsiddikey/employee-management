@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 
 export default function Header() {
   return (
@@ -39,34 +40,9 @@ export default function Header() {
             <i className="fas fa-shopping-cart"></i>
           </a>
 
-          <div className="dropdown">
-            <a
-              className="text-reset me-3 dropdown-toggle hidden-arrow"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-mdb-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i className="fas fa-bell"></i>
-              <span className="badge rounded-pill badge-notification bg-danger">1</span>
-            </a>
-            <ul
-              className="dropdown-menu dropdown-menu-end"
-              aria-labelledby="navbarDropdownMenuLink"
-            >
-              <li>
-                <a className="dropdown-item" href="#">Some news</a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">Another news</a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">Something else here</a>
-              </li>
-            </ul>
-          </div>
 
+          <div className='d-flex align-items-center gap-5'>
+          <NotificationsOutlinedIcon />
           <div className="dropdown">
             <a
               className="dropdown-toggle d-flex align-items-center hidden-arrow"
@@ -77,7 +53,7 @@ export default function Header() {
               aria-expanded="false"
             >
               <img
-                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                src="https://avatars.githubusercontent.com/u/68794315?v=4"
                 className="rounded-circle"
                 height="25"
                 alt="Black and White Portrait of a Man"
@@ -99,8 +75,10 @@ export default function Header() {
               </li>
             </ul>
           </div>
-        </div>
+          </div>
 
+
+        </div>
       </div>
 
     </nav>

@@ -119,7 +119,6 @@ export const EmployeeList = () => {
             </button>
           </a>
 
-
           <button
             onClick={handleDelete}
             type="button"
@@ -128,7 +127,6 @@ export const EmployeeList = () => {
             <DeleteOutlinedIcon />
             Delete
           </button>
-
 
         </div>
         <div className='d-flex align-items-center gap-3'>
@@ -140,7 +138,6 @@ export const EmployeeList = () => {
             onChange={(e) => setSearch(e.target.value)}
             onKeyDown={handleKeyDown}
 
-
           />
           <button
             type="button"
@@ -151,12 +148,10 @@ export const EmployeeList = () => {
             Sort by
           </button>
 
-
           {/* <!-- Button trigger modal --> */}
           <button type="button" className="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" style={{ width: '190px' }}>
             <AddIcon />  Add new
           </button>
-
 
           {/* <!-- Modal --> */}
           <div className="modal fade" id="exampleModal" tabIndex={parseInt("-1")} aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -235,7 +230,8 @@ export const EmployeeList = () => {
         </div>
       </div>
 
-     <div >
+
+     <div style={{overflowX:"auto"}}>
      <table className="table align-middle mb-0 rounded table-hover">
         <thead >
           <tr >
@@ -272,7 +268,6 @@ export const EmployeeList = () => {
                   </label>
                 </div>
               </td>
-
 
               <td>
                 <div className="d-flex align-items-center">
@@ -311,8 +306,6 @@ export const EmployeeList = () => {
         </ul>
       </nav>
     </div>
-
   </div>
-
   )
 }
